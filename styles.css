@@ -134,6 +134,33 @@ a {
   text-transform: uppercase;
 }
 
+.brand-wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.18em;
+  white-space: nowrap;
+}
+
+.brand-talon {
+  color: var(--white);
+}
+
+.brand-space {
+  color: var(--blue-cold);
+  text-shadow: 0 0 18px rgba(51, 159, 232, 0.46);
+}
+
+.brand-space::before {
+  content: "";
+  display: inline-block;
+  width: 0.42em;
+  height: 0.42em;
+  margin: 0 0.26em 0 0.1em;
+  border-top: 2px solid var(--blue);
+  border-right: 2px solid var(--blue);
+  transform: translateY(-0.08em) rotate(45deg);
+}
+
 .brand-mark {
   width: 42px;
   height: 42px;
