@@ -137,7 +137,7 @@ a {
 .brand-wordmark {
   display: inline-flex;
   align-items: baseline;
-  gap: 0.18em;
+  gap: 0.42em;
   white-space: nowrap;
 }
 
@@ -145,20 +145,16 @@ a {
   color: var(--white);
 }
 
-.brand-space {
-  color: var(--blue-cold);
-  text-shadow: 0 0 18px rgba(51, 159, 232, 0.46);
+.brand-separator {
+  color: var(--blue);
+  font-family: var(--mono);
+  font-weight: 800;
+  transform: skewX(-12deg);
 }
 
-.brand-space::before {
-  content: "";
-  display: inline-block;
-  width: 0.42em;
-  height: 0.42em;
-  margin: 0 0.26em 0 0.1em;
-  border-top: 2px solid var(--blue);
-  border-right: 2px solid var(--blue);
-  transform: translateY(-0.08em) rotate(45deg);
+.brand-space {
+  color: var(--blue-cold);
+  text-shadow: 0 0 20px rgba(51, 159, 232, 0.62);
 }
 
 .brand-mark {
