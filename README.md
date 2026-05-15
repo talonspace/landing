@@ -13,7 +13,8 @@ Then open `http://127.0.0.1:4173`.
 ## Files
 
 - `index.html` - page structure and investor-style narrative
-- `styles.css` - responsive visual system
+- `talonspace.css` - responsive visual system used by the site
+- `styles.css` - source copy of the visual system
 - `script.js` - small progressive enhancement for year and smooth scrolling
 - `assets/space-ready-ai-hero.png` - generated hero image asset
 - `assets/talonspace-logo.jpeg` - source logo used for the visual system
