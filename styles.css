@@ -267,8 +267,11 @@ h1,
 h2,
 h3,
 p {
-  overflow-wrap: break-word;
   max-width: 100%;
+}
+
+p {
+  overflow-wrap: break-word;
 }
 
 h1,
@@ -276,6 +279,9 @@ h2,
 h3 {
   margin: 0;
   line-height: 1.04;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 
 h1,
@@ -297,7 +303,7 @@ h1 span {
 }
 
 h2 {
-  font-size: clamp(30px, 4.4vw, 54px);
+  font-size: clamp(27px, 3.55vw, 44px);
 }
 
 h3 {
@@ -382,8 +388,8 @@ h3 {
 
 .split {
   display: grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(280px, 1fr);
-  gap: clamp(30px, 7vw, 88px);
+  grid-template-columns: minmax(420px, 1fr) minmax(280px, 0.95fr);
+  gap: clamp(30px, 5vw, 68px);
   align-items: start;
 }
 
