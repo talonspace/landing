@@ -325,6 +325,13 @@ h1 span {
   max-width: 100%;
 }
 
+.title-separator {
+  display: inline;
+  color: var(--blue);
+  font-family: var(--mono);
+  font-weight: 800;
+}
+
 .wedge-title span {
   display: block;
   max-width: 100%;
@@ -587,6 +594,229 @@ h3 {
   text-decoration: none;
 }
 
+.memo-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 150px 0 72px;
+  border-bottom: 1px solid var(--line-hot);
+  background:
+    linear-gradient(116deg, rgba(51, 159, 232, 0.14) 0 24%, transparent 24.2% 100%),
+    radial-gradient(circle at 82% 18%, rgba(51, 159, 232, 0.2), transparent 26rem),
+    #050607;
+}
+
+.memo-hero::after {
+  content: "";
+  position: absolute;
+  right: -10vw;
+  bottom: -22vw;
+  width: 54vw;
+  aspect-ratio: 1;
+  background: url("assets/talonspace-logo.jpeg") center / contain no-repeat;
+  opacity: 0.12;
+  transform: rotate(-9deg);
+  mix-blend-mode: screen;
+}
+
+.memo-shell {
+  position: relative;
+  z-index: 1;
+  width: min(var(--max), calc(100% - 36px));
+  margin: 0 auto;
+}
+
+.memo-hero h1 {
+  max-width: min(980px, 100%);
+  font-size: clamp(34px, 4.8vw, 66px);
+}
+
+.memo-subtitle {
+  max-width: 760px;
+  margin: 26px 0 0;
+  color: var(--silver);
+  font-size: clamp(17px, 1.8vw, 22px);
+}
+
+.memo-facts,
+.memo-economics,
+.memo-timeline {
+  display: grid;
+  gap: 12px;
+}
+
+.memo-facts {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 44px;
+}
+
+.memo-facts article,
+.memo-economics article,
+.memo-timeline article {
+  border: 1px solid var(--line);
+  background: rgba(13, 17, 21, 0.74);
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+  padding: 22px;
+}
+
+.memo-facts span,
+.memo-economics span,
+.memo-timeline span,
+.memo-card-grid span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--blue-cold);
+  font-family: var(--display);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.memo-facts strong,
+.memo-economics strong {
+  display: block;
+  color: var(--white);
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.1;
+}
+
+.memo-section {
+  padding: clamp(76px, 9vw, 118px) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.memo-dark {
+  background:
+    linear-gradient(145deg, rgba(51, 159, 232, 0.09), transparent 38%),
+    rgba(3, 4, 5, 0.42);
+}
+
+.memo-two-col {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.9fr) minmax(320px, 1fr);
+  gap: clamp(34px, 6vw, 86px);
+  align-items: start;
+}
+
+.memo-heading {
+  max-width: 900px;
+  margin-bottom: 36px;
+}
+
+.memo-heading p,
+.memo-copy p {
+  color: var(--silver);
+  font-size: clamp(16px, 1.6vw, 20px);
+}
+
+.memo-copy p:first-child {
+  margin-top: 0;
+}
+
+.memo-list {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0 0;
+  padding: 0;
+  color: var(--silver);
+  list-style: none;
+}
+
+.memo-list li {
+  position: relative;
+  padding-left: 28px;
+}
+
+.memo-list li::before {
+  content: "//";
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.memo-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.memo-card-grid.six {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.memo-card-grid article {
+  min-height: 250px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.052), transparent 34%),
+    var(--panel);
+  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
+}
+
+.memo-card-grid p,
+.memo-economics p,
+.memo-timeline p {
+  color: var(--silver);
+}
+
+.memo-market-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.memo-market-strip span {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: rgba(13, 17, 21, 0.84);
+  color: var(--white);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.memo-economics {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.memo-table {
+  display: grid;
+  border: 1px solid var(--line);
+  background: rgba(196, 201, 207, 0.08);
+}
+
+.memo-table div {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr 1.25fr;
+  gap: 1px;
+  border-bottom: 1px solid var(--line);
+}
+
+.memo-table div:last-child {
+  border-bottom: 0;
+}
+
+.memo-table span,
+.memo-table strong {
+  padding: 18px;
+  background: var(--panel);
+}
+
+.memo-table strong {
+  color: var(--blue-cold);
+  text-transform: uppercase;
+}
+
+.memo-table span {
+  color: var(--silver);
+}
+
+.memo-timeline {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 @media (max-width: 880px) {
   .site-header {
     position: absolute;
@@ -643,8 +873,22 @@ h3 {
   }
 
   .platform-grid,
-  .market-list {
+  .market-list,
+  .memo-card-grid,
+  .memo-card-grid.six,
+  .memo-market-strip,
+  .memo-economics,
+  .memo-timeline,
+  .memo-facts {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .memo-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .memo-table div {
+    grid-template-columns: 1fr;
   }
 
   .closing-content .button {
@@ -683,8 +927,29 @@ h3 {
 
   .platform-grid,
   .market-list,
-  .business-layout {
+  .business-layout,
+  .memo-card-grid,
+  .memo-card-grid.six,
+  .memo-market-strip,
+  .memo-economics,
+  .memo-timeline,
+  .memo-facts {
     grid-template-columns: 1fr;
+  }
+
+  .memo-hero {
+    padding-top: 118px;
+  }
+
+  .memo-hero h1 {
+    max-width: min(100%, 340px);
+    font-size: clamp(20px, 5.8vw, 24px);
+    line-height: 1.18;
+  }
+
+  .memo-subtitle {
+    max-width: min(100%, 340px);
+    font-size: 15px;
   }
 
   .capability-card,
